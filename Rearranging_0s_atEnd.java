@@ -1,14 +1,18 @@
-public class DSA {
-    public static void main(String[] args) {
-        int[]no={0,0,1,2,5,6,5,4,0,5,6,6,5,0,44,4,44,4,4,4};
-        ArrayList<Integer> arr=new ArrayList<>();
-       for (int j:no){
-           arr.add(j);
-       }
-            for (int i=0;i<no.length-1;i++){
-                if(arr.get(i) ==0){
-                    int temp=arr.remove(i);
-                    arr.add(temp);
-            }}
-        System.out.println(arr);
-}}
+ public class DSA {
+            public static void main(String[] args) {
+                int[] no = {0,0,1,0,0,0,2,5,0,6,4,0,0,0,4,4};
+                ArrayList<Integer> arr = new ArrayList<>();
+                long count =0;
+                for (int j : no){
+                    if(j!=0){
+                    arr.add(j);
+                    }else {
+                        count++;
+                    }
+                }
+                for (int i = 0; i < count; i++) {
+                    arr.add(0);
+                }
+                System.out.println(arr);
+            }
+        }
